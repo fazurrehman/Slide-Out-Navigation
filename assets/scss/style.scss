@@ -1,0 +1,49 @@
+//@import "normalize";
+
+/* reset */
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content{
+  position: relative;
+  z-index: 0;
+  text-align: center
+}
+
+/* toggle button */
+.toggle{
+  position: fixed;
+  top: 20px;
+  left: 200px;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 30px;
+  color: #000;
+}
+
+.slidebar{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  padding: 30px;
+  background: #333;
+  z-index: 0;
+}
+
+.slidebar li{
+  -webkit-font-smoothing: antialiased;
+  color: rgba(255,255,255,.8);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.slidebar li:hover{
+  color: rgba(255,255,255,1)
+}
