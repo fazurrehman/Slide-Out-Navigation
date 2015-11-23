@@ -1,10 +1,14 @@
-//@import "normalize";
+@import "normalize";
 
 /* reset */
 li{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+*{
+  transition: 800ms all cubic-bezier(.02,1.17,1,-1.25) 
 }
 
 .content{
@@ -17,7 +21,7 @@ li{
 .toggle{
   position: fixed;
   top: 20px;
-  left: 200px;
+  left: 20px;
   z-index: 1;
   text-decoration: none;
   font-size: 30px;
@@ -28,7 +32,7 @@ li{
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -190px;
   width: 120px;
   padding: 30px;
   background: #333;
@@ -46,4 +50,21 @@ li{
 
 .slidebar li:hover{
   color: rgba(255,255,255,1)
+}
+
+
+#sidebartoggler{
+  display: none;
+}
+
+#sidebartoggler:checked + .page-wrap .slidebar{
+  left: 0;
+}
+
+#sidebartoggler:checked + .page-wrap .toggle{
+  left: 200px;
+}
+
+#sidebartoggler:checked + .page-wrap .content{
+  padding-left: 180px;
 }
